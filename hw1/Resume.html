@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Online Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Jisheng Jiang</h1>
+        <p>Software Engineer | AI Developer</p>
+    </header>
+
+    <section id="about">
+        <img src="assets/my_pic.png" alt="Profile Picture" width="200">
+        <h2>About Me</h2>
+        <p>
+            I am <strong>Jisheng Jiang</strong>, a Senior Computer Science student at <strong>San José State University (SJSU)</strong> with a <strong>GPA of 3.6</strong>.
+            I have experience as a <strong>Full-time Backend Engineer Intern</strong> at <strong>Tripalink</strong>, a real estate company specializing in apartment management
+            and contactless rental experiences. The company also provides technical solutions for other startups.
+        </p>
+        
+        <p>
+            At Tripalink, I was responsible for <strong>daily standups</strong> and assisting property managers with <strong>technical issues</strong>. Additionally, I developed
+            a <strong>new API</strong> to record timestamps for <strong>workflow tracking</strong>, which integrated with the <strong>data team’s analytics pipeline</strong>
+            to improve operational efficiency.
+        </p>
+        
+        <p>
+            My second major experience involved <strong>fine-tuning LLaMA 3.1</strong> as an <strong>individual project</strong>. I primarily used <strong>PyTorch</strong> to train
+            the model as a <strong>code-specific AI assistant</strong>. To optimize performance within <strong>limited computational resources</strong>, I leveraged
+            <strong>TensorFlow, CUDA, and LoRA</strong>. Additionally, I specifically trained the model to operate in <strong>CPU mode</strong>, allowing it to generate
+            accurate responses without requiring intensive GPU computation.
+        </p>
+        
+    </section>
+
+    <section id="video">
+        <h2>Introduction Video</h2>
+        <video width="400" controls>
+            <source src="assets/my_video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="experience">
+        <h2>Work Experience</h2>
+        <h3>Software Engineering Intern - Tripalink, Corp.</h3>
+        <p>June 2023 - Aug 2023</p>
+        <ul>
+            <li>Developed new HTTP endpoints for housing search functionalities using Python.</li>
+            <li>Designed and implemented a data access object to retrieve data from SQL database.</li>
+        </ul>
+
+        <h3>Independent AI Model Training</h3>
+        <p>2024</p>
+        <ul>
+            <li>Fine-tuned LLaMA-3-8B-Instruct for NLP applications.</li>
+            <li>Used LoRA and 4-bit quantization for efficient model deployment.</li>
+            <li>Published on Hugging Face with high performance.</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <label for="project-select">Select a Project:</label>
+        <select id="project-select" onchange="location = this.value;">
+            <option value="#">--Select--</option>
+            <option value="prj1.html">Software Engineering Internship</option>
+            <option value="prj2.html">AI Model Training</option>
+        </select>
+    </section>
+
+    <section id="transcript">
+        <h2>Transcript</h2>
+        <p><a href="Transcript.html">View Transcript (Password Protected)</a></p>
+    </section>
+    
+    <section id="map">
+        <h2>My Location</h2>
+        <iframe
+            width="600"
+            height="450"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=2854+Forbes+Ave+Santa+Clara+CA+95051">
+        </iframe>
+    </section>
+
+</body>
+</html>

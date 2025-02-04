@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript</title>
+    <script>
+        function checkPassword() {
+            var password = document.getElementById("password").value;
+            if (password === "frankbutt") {
+                document.getElementById("content").style.display = "block";
+                document.getElementById("login").style.display = "none";
+            } else {
+                alert("Incorrect password. Please try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h2>Transcript Login</h2>
+    <div id="login">
+        <p>Enter Password:</p>
+        <input type="password" id="password">
+        <button onclick="checkPassword()">Submit</button>
+    </div>
+
+    <div id="content" style="display: none;">
+        <h2>My Academic Transcript</h2>
+        <table border="1">
+            <tr>
+                <th>Course</th>
+                <th>Grade</th>
+            </tr>
+            <tr>
+                <td>CS160 - Software Engineering</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>CS151 - Object-Oriented Design</td>
+                <td>A-</td>
+            </tr>
+            <tr>
+                <td>CS166 - Database Management</td>
+                <td>B+</td>
+            </tr>
+            <tr>
+                <td><strong>GPA</strong></td>
+                <td><strong>3.6</strong></td>
+            </tr>
+        </table>
+
+        <h3>Unofficial Transcript PDF</h3>
+        <iframe src="assets/unofficial.pdf" width="600" height="400"></iframe>
+    </div>
+
+</body>
+</html>
