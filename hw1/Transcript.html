@@ -6,8 +6,10 @@
     <title>Transcript</title>
     <script>
         function checkPassword() {
-            var password = document.getElementById("password").value;
-            if (password === "frankbutt") {
+            //this place toLowerCase to make sure it's case insensitive.
+            var password = document.getElementById("password").value.toLowerCase();
+            var correctPassword = "frankbutt"; 
+            if (password === correctPassword) {
                 document.getElementById("content").style.display = "block";
                 document.getElementById("login").style.display = "none";
             } else {
@@ -26,27 +28,23 @@
     </div>
 
     <div id="content" style="display: none;">
-        <h2>My Academic Transcript</h2>
+        <h2>Academic Transcript - Prerequisite(s): CS 146, CS 151, CS 100W</h2>
         <table border="1">
             <tr>
                 <th>Course</th>
                 <th>Grade</th>
             </tr>
             <tr>
-                <td>CS160 - Software Engineering</td>
-                <td>A</td>
+                <td>CS146 - Data Structures and Algorithms</td>
+                <td>B-</td>
             </tr>
             <tr>
                 <td>CS151 - Object-Oriented Design</td>
+                <td>C+</td>
+            </tr>
+            <tr>
+                <td>CS 100W - Technical Writing Workshop</td>
                 <td>A-</td>
-            </tr>
-            <tr>
-                <td>CS166 - Database Management</td>
-                <td>B+</td>
-            </tr>
-            <tr>
-                <td><strong>GPA</strong></td>
-                <td><strong>3.6</strong></td>
             </tr>
         </table>
 
