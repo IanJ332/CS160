@@ -5,33 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ticket Master</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            font-weight: 600;
+        }
+        p, ul {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Project 2: <a href="https://github.com/IanJ332/Ticket-Master" target="_blank">Ticket Master</a></h1>
-    </header>
-    <section>
-        <h2>Overview</h2>
-        <p>
-            This project was developed during <strong>CS157A (Database Management Systems)</strong>. The main objective was to create a ticketing 
-            website that provides functionalities such as publishing events, deleting events, modifying event details, and adding information 
-            like <strong>pictures, time, location</strong>. It also supports automatic redirection to Google Maps for event locations.
-        </p>
+    <div class="container">
+        <header class="section">
+            <h1>Project 2: <a href="https://github.com/IanJ332/Ticket-Master" target="_blank">Ticket Master</a></h1>
+        </header>
+        <section class="section">
+            <h2>Overview</h2>
+            <p>
+                This project was developed during <strong>CS157A (Database Management Systems)</strong>. The main objective was to create a ticketing 
+                website that provides functionalities such as publishing events, deleting events, modifying event details, and adding information 
+                like <strong>pictures, time, location</strong>. It also supports automatic redirection to Google Maps for event locations.
+            </p>
 
-        <h2>Key Features</h2>
-        <ul>
-            <li>Users can make purchases, request refunds, bind payment information, rate events, and write reviews.</li>
-            <li>Basic functionalities for event management include adding, editing, deleting, and viewing events.</li>
-            <li>Google Maps integration for location-based navigation.</li>
-        </ul>
+            <h2>Key Features</h2>
+            <ul>
+                <li>Users can make purchases, request refunds, bind payment information, rate events, and write reviews.</li>
+                <li>Basic functionalities for event management include adding, editing, deleting, and viewing events.</li>
+                <li>Google Maps integration for location-based navigation.</li>
+            </ul>
 
-        <h2>Performance Optimizations</h2>
-        <p>
-            Significant efforts were made to optimize the backend database for better performance under heavy workloads. 
-            Advanced database concepts like <strong>optimistic locking</strong> and <strong>pessimistic locking</strong> were implemented to ensure data consistency and prevent logic errors in the system, even under high throughput.
-        </p>
+            <h2>Performance Optimizations</h2>
+            <p>
+                Significant efforts were made to optimize the backend database for better performance under heavy workloads. 
+                Advanced database concepts like <strong>optimistic locking</strong> and <strong>pessimistic locking</strong> were implemented to ensure data consistency and prevent logic errors in the system, even under high throughput.
+            </p>
 
-        <a href="Resume.html">Back to Resume</a>
-    </section>
+            <a href="Resume.html">Back to Resume</a>
+        </section>
+    </div>
 </body>
 </html>

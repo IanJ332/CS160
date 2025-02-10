@@ -5,48 +5,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Online Resume</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* Global Styles */
+        body {
+            font-family: 'Poppins', sans-serif; /* Updated Font */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            background: #ffffff;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5em;
+            text-align: center;
+            font-weight: 600;
+        }
+        header p {
+            text-align: center;
+            color: #555;
+            font-weight: 300; /* Softer subtitle */
+        }
+        img.profile-pic {
+            display: block;
+            margin: 10px auto;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 3px solid #ddd;
+        }
+        h2 {
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            color: #333;
+            font-weight: 600;
+        }
+        p, ul, select, button {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        select, button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        iframe {
+            border-radius: 15px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="section">
+            <h1>Jisheng Jiang</h1>
+            <p>Just a regular student</p>
+            <img src="assets/my_pic.png" alt="Profile Picture" class="profile-pic">
+        </header>
 
-    <header>
-        <h1>Jisheng Jiang</h1>
-        <p>Software Engineer | AI Developer</p>
-    </header>
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>
+                I am <strong>Jisheng Jiang</strong>, a Senior Computer Science student at <strong>San José State University (SJSU)</strong> with a <strong>GPA of 3.6</strong>.
+                I have experience as a <strong>Full-time Backend Engineer Intern</strong> at <strong>Tripalink</strong>, a real estate company specializing in apartment management
+                and contactless rental experiences. The company also provides technical solutions for other startups.
+            </p>
+            <p>
+                At Tripalink, I was responsible for <strong>daily standups</strong> and assisting property managers with <strong>technical issues</strong>. Additionally, I developed
+                a <strong>new API</strong> to record timestamps for <strong>workflow tracking</strong>, which integrated with the <strong>data team’s analytics pipeline</strong>
+                to improve operational efficiency.
+            </p>
+            <p>
+                My second major experience involved <strong>fine-tuning LLaMA 3.1</strong> as an <strong>individual project</strong>. I primarily used <strong>PyTorch</strong> to train
+                the model as a <strong>code-specific AI assistant</strong>. To optimize performance within <strong>limited computational resources</strong>, I leveraged
+                <strong>TensorFlow, CUDA, and LoRA</strong>. Additionally, I specifically trained the model to operate in <strong>CPU mode</strong>, allowing it to generate
+                accurate responses without requiring intensive GPU computation.
+            </p>
+        </section>
 
-    <section id="about">
-        <img src="assets/my_pic.png" alt="Profile Picture" width="200">
-        <h2>About Me</h2>
-        <p>
-            I am <strong>Jisheng Jiang</strong>, a Senior Computer Science student at <strong>San José State University (SJSU)</strong> with a <strong>GPA of 3.6</strong>.
-            I have experience as a <strong>Full-time Backend Engineer Intern</strong> at <strong>Tripalink</strong>, a real estate company specializing in apartment management
-            and contactless rental experiences. The company also provides technical solutions for other startups.
-        </p>
-        
-        <p>
-            At Tripalink, I was responsible for <strong>daily standups</strong> and assisting property managers with <strong>technical issues</strong>. Additionally, I developed
-            a <strong>new API</strong> to record timestamps for <strong>workflow tracking</strong>, which integrated with the <strong>data team’s analytics pipeline</strong>
-            to improve operational efficiency.
-        </p>
-        
-        <p>
-            My second major experience involved <strong>fine-tuning LLaMA 3.1</strong> as an <strong>individual project</strong>. I primarily used <strong>PyTorch</strong> to train
-            the model as a <strong>code-specific AI assistant</strong>. To optimize performance within <strong>limited computational resources</strong>, I leveraged
-            <strong>TensorFlow, CUDA, and LoRA</strong>. Additionally, I specifically trained the model to operate in <strong>CPU mode</strong>, allowing it to generate
-            accurate responses without requiring intensive GPU computation.
-        </p>
-        
-    </section>
+        <!-- Introduction Video Section -->
+        <section id="video" class="section">
+            <h2>Introduction Video</h2>
+            <video width="100%" controls>
+                <source src="assets/my_video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </section>
 
-    <section id="video">
-        <h2>Introduction Video</h2>
-        <video width="400" controls>
-            <source src="assets/my_video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </section>
-
-    <section id="experience">
-        <section id="experience">
+        <!-- Work Experience Section -->
+        <section id="experience" class="section">
             <h2>Work Experience</h2>
             <h3>Software Engineering Intern - <a href="https://tripalink.com/" target="_blank">Tripalink, Corp.</a></h3>
             <p>June 2023 - Aug 2023</p>
@@ -54,61 +125,59 @@
                 <li>Developed new HTTP endpoints for housing search functionalities using Python.</li>
                 <li>Designed and implemented a data access object to retrieve data from SQL database.</li>
             </ul>
-        </section>        
+            <h3>Independent AI Model Training</h3>
+            <p>2024</p>
+            <ul>
+                <li>Fine-tuned LLaMA-3-8B-Instruct for NLP applications.</li>
+                <li>Used LoRA and 4-bit quantization for efficient model deployment.</li>
+                <li>Published on Hugging Face with high performance.</li>
+            </ul>
+        </section>
 
-        <h3>Independent AI Model Training</h3>
-        <p>2024</p>
-        <ul>
-            <li>Fine-tuned LLaMA-3-8B-Instruct for NLP applications.</li>
-            <li>Used LoRA and 4-bit quantization for efficient model deployment.</li>
-            <li>Published on Hugging Face with high performance.</li>
-        </ul>
-    </section>
-
-    <!--need partial changes, 1. jump botton and 2.looks better.-->
-    <!--And maybe creat a invalid alert?-->
-    <section id="projects">
-        <h2>Projects</h2>
-        <label for="project-select">Select a Project:</label>
-        <select id="project-select">
-            <option value="#">--Select--</option>
-            <!--need to correct project name-->
-            <option value="prj1.html">Local Jira</option>
-            <option value="prj2.html">Ticket Master</option>
-        </select>
-        <button onclick="goToProject()">Go to Project</button>
-        <script>
-            function goToProject() {
-                const selectedProject = document.getElementById("project-select").value;
-                if (selectedProject !== "#") {
-                    location.href = selectedProject;
-                } else {
-                    alert("You need to select a project to check my experience, current Selection is invalid");
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <label for="project-select">Select a Project:</label>
+            <select id="project-select">
+                <option value="#">--Select--</option>
+                <option value="prj1.html">Local Jira</option>
+                <option value="prj2.html">Ticket Master</option>
+            </select>
+            <button onclick="goToProject()">Go to Project</button>
+            <!-- Add JS Logic -->
+            <script>
+                function goToProject() {
+                    const selectedProject = document.getElementById("project-select").value;
+                    if (selectedProject !== "#") {
+                        location.href = selectedProject;
+                    } else {
+                        // Adding alert as requested in comments
+                        alert("You need to select a project to check my experience, current selection is invalid.");
+                    }
                 }
-            }
-        </script>
-    </section>
-    
+            </script>
+        </section>
 
-    <section id="transcript">
-        <h2>Transcript</h2>
-        <p><a href="Transcript.html">View Transcript (Password Protected)</a></p>
-    </section>
-    
-    <section id="map">
-        <!--I need to replace the place with my API, now go google cloud platform see if API need money, if yes, seeking for other options.-->
-        <h2>My Location</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.4362766215722!2d-121.9772594!3d37.332178800000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fca89dfeb568d%3A0xc66dcd382f732683!2s2854%20Forbes%20Ave%2C%20Santa%20Clara%2C%20CA%2095051!5e0!3m2!1sen!2sus!4v1739054064025!5m2!1sen!2sus"
-        width="600"
-        height="450"
-        style="border:0;"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-    
-    </section>
-    
+        <!-- Transcript Section -->
+        <section id="transcript" class="section">
+            <h2>Transcript</h2>
+            <!-- Reminder: Need to ensure Transcript.html is protected as described -->
+            <p><a href="Transcript.html">View Transcript (Password Protected)</a></p>
+        </section>
 
+        <!-- Map Section -->
+        <section id="map" class="section">
+            <h2>My Location</h2>
+            <!-- Need to check if API requires money -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.4362766215722!2d-121.9772594!3d37.332178800000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fca89dfeb568d%3A0xc66dcd382f732683!2s2854%20Forbes%20Ave%2C%20Santa%20Clara%2C%20CA%2095051!5e0!3m2!1sen!2sus!4v1739054064025!5m2!1sen!2sus"
+                width="100%"
+                height="450"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+    </div>
 </body>
 </html>
